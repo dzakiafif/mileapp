@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "d6b968b6-e103-499e-98b0-737438419eb5",
+		"name": "mileapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Package",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transaction\": {\r\n        \"customer_name\": \"\",\r\n        \"amount\": \"\",\r\n        \"discount\": \"0\",\r\n        \"cash_amount\": 0,\r\n        \"cash_charge\": 0,\r\n        \"additional_field\": \"\",\r\n        \"customer_attribute\": {\r\n            \"nama_sales\": \"\",\r\n            \"top\":\"\",\r\n            \"jenis_pelanggan\":\"\"\r\n        },\r\n        \"origin_data\": {\r\n            \"customer_name\": \"\",\r\n            \"customer_address\": \"\",\r\n            \"customer_email\": null,\r\n            \"customer_phone\": \"\",\r\n            \"customer_zip_code\":\"\",\r\n            \"customer_address_detail\":null,\r\n            \"customer_zone_code\": \"\"\r\n        },\r\n        \"destination_data\": {\r\n            \"customer_name\": \"\",\r\n            \"customer_address\": \"\",\r\n            \"customer_email\": null,\r\n            \"customer_phone\": \"\",\r\n            \"customer_zip_code\":\"\",\r\n            \"customer_address_detail\":null,\r\n            \"customer_zone_code\": \"\"\r\n        },\r\n        \"custom_field\": {\r\n            \"catatan_tambahan\": \"\"\r\n        }\r\n    },\r\n    \"connote\": {\r\n        \"actual_weight\": 0,\r\n        \"volume_weight\": 0,\r\n        \"chargeable_weight\": 0,\r\n        \"location_name\": \"\"\r\n    },\r\n    \"koli_data\": [\r\n        {\r\n            \"koli_length\": 0,\r\n            \"koli_chargeable_weight\": 0,\r\n            \"koli_height\":0,\r\n            \"koli_description\":\"0\",\r\n            \"koli_volume\": 0,\r\n            \"koli_weight\": 0,\r\n            \"koli_custom_field\": {\r\n                \"awb_sicepat\": null,\r\n                \"harga_barang\": null\r\n            }\r\n            \r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/package",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"package"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Package",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/package",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"package"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": null,
+							"description": "default 10",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": null,
+							"description": "column like created_at",
+							"disabled": true
+						},
+						{
+							"key": "direction",
+							"value": null,
+							"description": "asc / desc",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Pacakge",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/package/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"package",
+						":id"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show package by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/package/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"package",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Package By Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transaction\": {\r\n        \"customer_name\": \"\",\r\n        \"amount\": \"\",\r\n        \"discount\": \"0\",\r\n        \"cash_amount\": 0,\r\n        \"cash_charge\": 0,\r\n        \"additional_field\": \"\",\r\n        \"customer_attribute\": {\r\n            \"nama_sales\": \"\",\r\n            \"top\":\"\",\r\n            \"jenis_pelanggan\":\"\"\r\n        },\r\n        \"origin_data\": {\r\n            \"customer_name\": \"\",\r\n            \"customer_address\": \"\",\r\n            \"customer_email\": null,\r\n            \"customer_phone\": \"\",\r\n            \"customer_zip_code\":\"\",\r\n            \"customer_address_detail\":null,\r\n            \"customer_zone_code\": \"\"\r\n        },\r\n        \"destination_data\": {\r\n            \"customer_name\": \"\",\r\n            \"customer_address\": \"\",\r\n            \"customer_email\": null,\r\n            \"customer_phone\": \"\",\r\n            \"customer_zip_code\":\"\",\r\n            \"customer_address_detail\":null,\r\n            \"customer_zone_code\": \"\"\r\n        },\r\n        \"custom_field\": {\r\n            \"catatan_tambahan\": \"\"\r\n        }\r\n    },\r\n    \"connote\": {\r\n        \"actual_weight\": 0,\r\n        \"volume_weight\": 0,\r\n        \"chargeable_weight\": 0,\r\n        \"location_name\": \"\"\r\n    },\r\n    \"koli_data\": [\r\n        {\r\n            \"koli_length\": 0,\r\n            \"koli_chargeable_weight\": 0,\r\n            \"koli_height\":0,\r\n            \"koli_description\":\"\",\r\n            \"koli_volume\": 0,\r\n            \"koli_weight\": 0,\r\n            \"koli_custom_field\": {\r\n                \"awb_sicepat\": null,\r\n                \"harga_barang\": null\r\n            },\r\n            \"koli_kode\": \"\"\r\n            \r\n        },\r\n        {\r\n            \"koli_length\": 0,\r\n            \"koli_chargeable_weight\": 0,\r\n            \"koli_height\":0,\r\n            \"koli_description\":\"\",\r\n            \"koli_volume\": 0,\r\n            \"koli_weight\": 0,\r\n            \"koli_custom_field\": {\r\n                \"awb_sicepat\": null,\r\n                \"harga_barang\": null\r\n            },\r\n            \"koli_kode\": \"\"\r\n        },\r\n        {\r\n            \"koli_length\": 0,\r\n            \"koli_chargeable_weight\": 0,\r\n            \"koli_height\":0,\r\n            \"koli_description\":\"test\",\r\n            \"koli_volume\": 0,\r\n            \"koli_weight\": 0,\r\n            \"koli_custom_field\": {\r\n                \"awb_sicepat\": null,\r\n                \"harga_barang\": null\r\n            },\r\n            \"koli_kode\": \"\"\r\n            \r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/package/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"package",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Package By Id",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transaction\": {\r\n        \"customer_name\": \"\",\r\n        \"amount\": \"\",\r\n        \"discount\": \"0\",\r\n        \"cash_amount\": 0,\r\n        \"cash_charge\": 0,\r\n        \"additional_field\": \"\",\r\n        \"customer_attribute\": {\r\n            \"nama_sales\": \"\",\r\n            \"top\":\"\",\r\n            \"jenis_pelanggan\":\"\"\r\n        },\r\n        \"origin_data\": {\r\n            \"customer_name\": \"\",\r\n            \"customer_address\": \"\",\r\n            \"customer_email\": null,\r\n            \"customer_phone\": \"\",\r\n            \"customer_zip_code\":\"\",\r\n            \"customer_address_detail\":null,\r\n            \"customer_zone_code\": \"\"\r\n        },\r\n        \"destination_data\": {\r\n            \"customer_name\": \"\",\r\n            \"customer_address\": \"\",\r\n            \"customer_email\": null,\r\n            \"customer_phone\": \"\",\r\n            \"customer_zip_code\":\"\",\r\n            \"customer_address_detail\":null,\r\n            \"customer_zone_code\": \"\"\r\n        },\r\n        \"custom_field\": {\r\n            \"catatan_tambahan\": \"\"\r\n        }\r\n    },\r\n    \"connote\": {\r\n        \"actual_weight\": 0,\r\n        \"volume_weight\": 0,\r\n        \"chargeable_weight\": 0,\r\n        \"location_name\": \"\"\r\n    },\r\n    \"koli_data\": [\r\n        {\r\n            \"koli_length\": 0,\r\n            \"koli_chargeable_weight\": 0,\r\n            \"koli_height\":0,\r\n            \"koli_description\":\"\",\r\n            \"koli_volume\": 0,\r\n            \"koli_weight\": 0,\r\n            \"koli_custom_field\": {\r\n                \"awb_sicepat\": null,\r\n                \"harga_barang\": null\r\n            },\r\n            \"koli_kode\": \"\"\r\n            \r\n        },\r\n        {\r\n            \"koli_length\": 0,\r\n            \"koli_chargeable_weight\": 0,\r\n            \"koli_height\":0,\r\n            \"koli_description\":\"\",\r\n            \"koli_volume\": 0,\r\n            \"koli_weight\": 0,\r\n            \"koli_custom_field\": {\r\n                \"awb_sicepat\": null,\r\n                \"harga_barang\": null\r\n            },\r\n            \"koli_kode\": \"\"\r\n        },\r\n        {\r\n            \"koli_length\": 0,\r\n            \"koli_chargeable_weight\": 0,\r\n            \"koli_height\":0,\r\n            \"koli_description\":\"test\",\r\n            \"koli_volume\": 0,\r\n            \"koli_weight\": 0,\r\n            \"koli_custom_field\": {\r\n                \"awb_sicepat\": null,\r\n                \"harga_barang\": null\r\n            },\r\n            \"koli_kode\": \"\"\r\n            \r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/package/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"package",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
